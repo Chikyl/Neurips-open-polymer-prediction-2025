@@ -1,8 +1,8 @@
-#NeurIPS 2025 – Open Polymer Prediction
+# NeurIPS 2025 – Open Polymer Prediction
 
 Machine Learning for Polymer Property Prediction Using Molecular Representations
 
-##Overview
+## Overview
 
 This project explores machine learning techniques for predicting polymer properties from molecular structures represented as SMILES (Simplified Molecular Input Line Entry System).
 
