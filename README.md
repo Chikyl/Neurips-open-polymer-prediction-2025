@@ -58,17 +58,6 @@ Challenges addressed:
 
 ## ⚡ Approach at a Glance
 
-```mermaid
-flowchart LR
-    A[Raw SMILES<br/>+ extra Tg/Tc data] --> B[Canonical SMILES<br/>RDKit]
-    B --> C[Feature engineering<br/>14 descriptors +<br/>1024 Morgan bits]
-    C --> D[Per-target filtering<br/>drop missing labels]
-    D --> E[Optuna search<br/>100 trials, 5-fold GroupKFold]
-    E --> F[Final XGBoost model<br/>per target]
-    F --> G[Predictions<br/>Tg FFV Tc Density Rg]
-    G --> H[submission.csv]
-```
-
 1. **Canonicalise** SMILES so identical structures share one representation.
 2. **Featurise** with RDKit descriptors and binary Morgan fingerprints.
 3. **Tune** XGBoost per target with Optuna, scoring by MAE under grouped CV.
@@ -204,15 +193,6 @@ Predictions for the three public test rows:
 
 All predicted values fall in physically plausible ranges (FFV between 0 and 1, density near 1 g/cm³ for common polymers).
 
-### Leaderboard
-
-> Fill in your own numbers from Kaggle.
-
-| Metric | Value |
-|---|---|
-| Public leaderboard score | _your value_ |
-| Private leaderboard score | _your value_ |
-| Rank | _your value_ |
 
 ### Reading the results
 
